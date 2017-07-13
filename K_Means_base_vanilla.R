@@ -19,7 +19,10 @@ desc<-data_id[,-c(2:36,44,49)]
 
 names(input[, sapply(input, function(v) var(v, na.rm=TRUE)==0)])
 
-input.pca <- (prcomp(input, scale. = T, retx = TRUE))
+#input.pca <- (prcomp(input, scale. = T, retx = TRUE))
+
+#actually let's use princomp instead as test
+input.pca <- (princomp(input, scale. = T, retx = TRUE))
 
 #determine optimal number of PCs; plotting some of the components
 std_dev <- input.pca$sdev
