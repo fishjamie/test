@@ -48,7 +48,8 @@ cumsum(prop_varex)
 input.pca <- data.frame(input.pca$x)
 
 #Subset to 95% variation (5 components below is what we get from plot of above step)
-input.pca <- input.pca[,1:5]  
+#for testing let's also change number of PCAs taken to 6
+input.pca <- input.pca[,1:6]  
 
 
 #### set up k-means -----------------------------------------------------------------------####
